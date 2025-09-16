@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+
+:root {
+    /* --------- CORES MODO NORMAL (MBDTF INSPIRED) --------- */
+    --fundo-mbdtf: linear-gradient(135deg, #3a0b0b, #5c0f0f, #a02020); /* tons de vermelho/vinho */
+    --titulo-mbdtf: #FFFFFF;
+    --texto-mbdtf: #FFD700; /* dourado para destaques */
+    --botao-mbdtf: #8B0000; /* vermelho escuro */
+    --botao-hover-mbdtf: #FFD700; /* dourado */
+    
+    /* --------- CORES ALTO CONTRASTE --------- */
+    --alto-contraste-fundo: #000000;
+    --alto-contraste-texto: #FFFFFF;
+    --alto-contraste-link: #FFD700;
+}
+
+/* ----------- BASE ----------- */
+body {
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    background: var(--fundo-mbdtf);
+    color: var(--texto-mbdtf);
+}
+
+header {
+    background-color: rgba(0,0,0,0.6); /* leve transparência para harmonizar */
+    color: var(--titulo-mbdtf);
+}
+
+section {
+    padding-bottom: 5rem;
+}
+
+/* ----------- NAVEGAÇÃO ----------- */
+.nav-link {
+    color: var(--titulo-mbdtf);
+    font-weight: 600;
+}
+
+.nav-link:hover {
+    color: var(--texto-mbdtf);
+}
+
+/* ----------- INÍCIO ----------- */
+.inicio-fundo {
+    background: var(--fundo-mbdtf);
+    background-size: cover;
+    background-position: center;
+    border-radius: 80px;
+    width: 100%;
+    height: 606px;
+    padding: 40px;
+    margin: 0 auto;
+}
+
+.logo-centralizado {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.esquerda-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.botao-inicio {
+    background-color: var(--botao-mbdtf);
+    border-radius: 30px;
+    border: none;
+    width: 14em;
+    height: 3em;
+    color: var(--titulo-mbdtf);
+    font-weight: bold;
+}
+
+.botao-inicio:hover {
+    background-color: var(--botao-hover-mbdtf);
+    color: var(--botao-mbdtf);
+}
+
+.display-4 {
+    color: var(--titulo-mbdtf);
+    text-shadow: 2px 2px #000000;
+}
+
+/* ----------- SEÇÃO SOBRE ----------- */
+h2 {
+    font-family: 'Lemon', serif;
+    font-size: 2.5em;
+    color: var(--titulo-mbdtf);
+}
+
+/* ----------- GALERIA ----------- */
+#galeria {
+    background: var(--fundo-mbdtf);
+}
+
+.galeria-img {
+    max-width: 80%;
+    height: auto;
+    border: 2px solid var(--titulo-mbdtf);
+    border-radius: 15px;
+}
+
+/* ----------- CONTATO ----------- */
+#contato {
+    background: var(--fundo-mbdtf);
+    padding: 4rem 0;
+    color: var(--titulo-mbdtf);
+}
+
+.formulario {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    font-weight: bold;
+    color: #111;
+}
+
+.formulario button {
+    background-color: var(--botao-mbdtf);
+    border: none;
+    font-weight: bold;
+    color: var(--titulo-mbdtf);
+}
+
+.formulario button:hover {
+    background-color: var(--botao-hover-mbdtf);
+    color: #111;
+}
+
+.form-control {
+    background-color: #F1EDEF;
+}
+
+/* ----------- ACESSIBILIDADE ----------- */
+.menu-acessibilidade {
+    position: fixed;
+    top:2rem;
+    right:20px;
+    z-index: 1000;
+}
+
+.rotacao-botao {
+    transform: rotate(-90deg);
+    transform-origin: right center;
+}
+
+.opcoes-acessibilidade {
+    margin-top:10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.opcoes-acessibilidade button {
+    margin-bottom: 5px;
+}
+.apresenta-lista {
+    display: none;
+}
+
+/* ----------- ALTO CONTRASTE ----------- */
+.alto-contraste {
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+}
+
+.alto-contraste header,
+.alto-contraste footer,
+.alto-contraste .formulario {
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+}
+
+.alto-contraste .nav-link {
+    color: var(--alto-contraste-link);
+}
+
+.alto-contraste .botao-inicio,
+.alto-contraste .formulario button,
+.alto-contraste .btn-primary {
+    background-color: var(--alto-contraste-link);
+    color: var(--alto-contraste-fundo)
+}
+
+.alto-contraste #galeria {
+    background-color: var(--alto-contraste-fundo);
+}
+
+
